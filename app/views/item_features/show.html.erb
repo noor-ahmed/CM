@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pulse:</strong>
+  <%= @item_feature.pulse %>
+</p>
+
+<p>
+  <strong>Tariff on net:</strong>
+  <%= @item_feature.tariff_on_net %>
+</p>
+
+<p>
+  <strong>Tariff off net:</strong>
+  <%= @item_feature.tariff_off_net %>
+</p>
+
+<p>
+  <strong>Tariff on net on atw:</strong>
+  <%= @item_feature.tariff_on_net_on_atw %>
+</p>
+
+<p>
+  <strong>Tariff off net on atw:</strong>
+  <%= @item_feature.tariff_off_net_on_atw %>
+</p>
+
+<p>
+  <strong>Applicable time window:</strong>
+  <%= @item_feature.applicable_time_window %>
+</p>
+
+<p>
+  <strong>Call destinatio:</strong>
+  <%= @item_feature.call_destination %>
+</p>
+
+<%= link_to 'Edit', edit_item_feature_path(@item_feature) %> |
+<%= link_to 'Back', item_features_path %>

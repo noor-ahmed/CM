@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fnfs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>No of fnf</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fnfs.each do |fnf| %>
+      <tr>
+        <td><%= fnf.no_of_fnf %></td>
+        <td><%= link_to 'Show', fnf %></td>
+        <td><%= link_to 'Edit', edit_fnf_path(fnf) %></td>
+        <td><%= link_to 'Destroy', fnf, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fnf', new_fnf_path %>

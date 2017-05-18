@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Bonus Accounts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Da val available</th>
+      <th>Da val change</th>
+      <th>Da val before</th>
+      <th>Itemfeature</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bonus_accounts.each do |bonus_account| %>
+      <tr>
+        <td><%= bonus_account.da_val_available %></td>
+        <td><%= bonus_account.da_val_change %></td>
+        <td><%= bonus_account.da_val_before %></td>
+        <td><%= bonus_account.itemfeature %></td>
+        <td><%= link_to 'Show', bonus_account %></td>
+        <td><%= link_to 'Edit', edit_bonus_account_path(bonus_account) %></td>
+        <td><%= link_to 'Destroy', bonus_account, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bonus Account', new_bonus_account_path %>
