@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Da val available:</strong>
+  <%= @bonus_account.da_val_available %>
+</p>
+
+<p>
+  <strong>Da val change:</strong>
+  <%= @bonus_account.da_val_change %>
+</p>
+
+<p>
+  <strong>Da val before:</strong>
+  <%= @bonus_account.da_val_before %>
+</p>
+
+<p>
+  <strong>Itemfeature:</strong>
+  <%= @bonus_account.itemfeature %>
+</p>
+
+<%= link_to 'Edit', edit_bonus_account_path(@bonus_account) %> |
+<%= link_to 'Back', bonus_accounts_path %>

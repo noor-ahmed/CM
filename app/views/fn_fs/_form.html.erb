@@ -1,0 +1,22 @@
+<%= form_for(fnf) do |f| %>
+  <% if fnf.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fnf.errors.count, "error") %> prohibited this fnf from being saved:</h2>
+
+      <ul>
+      <% fnf.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :no_of_fnf %>
+    <%= f.number_field :no_of_fnf %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

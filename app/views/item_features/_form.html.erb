@@ -1,0 +1,52 @@
+<%= form_for(item_feature) do |f| %>
+  <% if item_feature.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(item_feature.errors.count, "error") %> prohibited this item_feature from being saved:</h2>
+
+      <ul>
+      <% item_feature.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pulse %>
+    <%= f.text_field :pulse %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tariff_on_net %>
+    <%= f.text_field :tariff_on_net %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tariff_off_net %>
+    <%= f.text_field :tariff_off_net %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tariff_on_net_on_atw %>
+    <%= f.text_field :tariff_on_net_on_atw %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tariff_off_net_on_atw %>
+    <%= f.text_field :tariff_off_net_on_atw %>
+  </div>
+
+  <div class="field">
+    <%= f.label :applicable_time_window %>
+    <%= f.text_field :applicable_time_window %>
+  </div>
+
+  <div class="field">
+    <%= f.label :call_destination %>
+    <%= f.text_field :call_destination %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

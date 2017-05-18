@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Item Features</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pulse</th>
+      <th>Tariff on net</th>
+      <th>Tariff off net</th>
+      <th>Tariff on net on atw</th>
+      <th>Tariff off net on atw</th>
+      <th>Applicable time window</th>
+      <th>Call destinatio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @item_features.each do |item_feature| %>
+      <tr>
+        <td><%= item_feature.pulse %></td>
+        <td><%= item_feature.tariff_on_net %></td>
+        <td><%= item_feature.tariff_off_net %></td>
+        <td><%= item_feature.tariff_on_net_on_atw %></td>
+        <td><%= item_feature.tariff_off_net_on_atw %></td>
+        <td><%= item_feature.applicable_time_window %></td>
+        <td><%= item_feature.call_destination %></td>
+        <td><%= link_to 'Show', item_feature %></td>
+        <td><%= link_to 'Edit', edit_item_feature_path(item_feature) %></td>
+        <td><%= link_to 'Destroy', item_feature, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item Feature', new_item_feature_path %>
